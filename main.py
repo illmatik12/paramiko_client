@@ -38,8 +38,8 @@ def main():
             else:
                 result = result + "비정상"
             
-        results.append(result)
-        App.close()
+            results.append(result)
+            App.close()
 
     Sender = telegram_sender.TelegramSender( api_server, api_path )
     
