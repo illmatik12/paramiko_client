@@ -2,13 +2,13 @@ import requests
 
 
 
-class Telegram_Sender:
-    def __init__(self):
-        self.host = 'url'
-        self.path = '/1' #send api 
+class TelegramSender:
+    def __init__(self, host, api_path ):
+        self.host = host 
+        self.api_path = api_path #send api 
     
     def send_message(self, send_msg):
-        url= self.host + self.path
+        url= self.host + self.api_path
         params  = {'send_msg' : send_msg}
         try:
             response = requests.get(url, params  = params)
@@ -18,6 +18,6 @@ class Telegram_Sender:
         return response
 
 if __name__ == '__main__': 
-    App = Telegram_Sender()
+    App = TelegramSender()
     response = App.send_message('test')
     print (response)
