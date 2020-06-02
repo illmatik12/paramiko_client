@@ -29,7 +29,7 @@ class CommandClient:
         return msg  
 
     def close(self):
-        if self.conn:
+        if self.sshClient:
             self.sshClient.close()
 
 if __name__ == '__main__': 
