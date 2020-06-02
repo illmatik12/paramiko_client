@@ -6,7 +6,7 @@ def main():
 
     # ssh connection 
     App = client.Command_client()
-    msg = App.execute_command("date")
+    msg = App.execute_command("date && uname -a")
     print (msg)
     App.close()
 
